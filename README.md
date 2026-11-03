@@ -2,7 +2,6 @@
 
 A desktop app for running the front desk of a small hotel: manage rooms, book and cancel stays, check guests out with an itemised bill, and view all current guests. Built with **JavaFX 21** and **Maven**, with data saved to plain text files so it persists between runs.
 
-![Rooms tab](docs/screenshot.png)
 
 ## Features
 
