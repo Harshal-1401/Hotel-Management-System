@@ -1,0 +1,19 @@
+# Build output
+target/
+*.class
+
+# Bundled SDKs (Maven downloads JavaFX via pom.xml)
+apache-maven-*/
+openjfx-*/
+
+# Personal notes
+HotelApp run cmd.txt
+css stylings.txt
+
+# Editors
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project

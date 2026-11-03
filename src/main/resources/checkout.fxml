@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="30.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.CheckoutController">
+   <children>
+      <VBox spacing="25.0" alignment="CENTER" styleClass="glass-pane" maxWidth="600">
+         <padding><Insets bottom="50.0" left="50.0" right="50.0" top="50.0" /></padding>
+         <children>
+            <Label text="ROOM CHECKOUT" styleClass="section-title" />
+            <GridPane hgap="20.0" vgap="25.0" alignment="CENTER">
+               <children>
+                  <Label text="Select Occupied Room:" GridPane.rowIndex="0" />
+                  <ComboBox fx:id="occupiedRoomCombo" prefWidth="300.0" promptText="Search Guest/Room" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Label text="Actual Checkout Date:" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="actualCheckoutPicker" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button onAction="#handleCheckout" text="Process Checkout" styleClass="button" prefWidth="200.0" />
+            <Label fx:id="checkoutStatus" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

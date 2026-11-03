@@ -1,0 +1,197 @@
+/* ================= GLOBAL ROOT ================= */
+.root {
+    -fx-background-color: #0b0e1a; 
+    -fx-font-family: "Segoe UI", Arial;
+    /* Globally remove the default blue focus ring from all elements */
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* ================= TITLES & LABELS (Visibility Fix) ================= */
+.label {
+    -fx-text-fill: #ffffff !important; 
+}
+
+.section-title {
+    -fx-text-fill: #ffffff !important;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-letter-spacing: 1px;
+}
+
+/* ================= TOP NAVIGATION TAB BARS ================= */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #0b0e1a; 
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent; 
+    -fx-padding: 10 20;
+}
+
+/* FIX: Removes the blue box/border when a tab is focused or clicked */
+.tab-pane .tab:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #6e7681; 
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab:selected {
+    -fx-border-color: transparent transparent #8b5cf6 transparent; 
+    -fx-border-width: 0 0 3 0; 
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #ffffff; 
+}
+
+/* ================= THE GLASS PANE (Main Containers) ================= */
+.glass-pane {
+    -fx-background-color: rgba(22, 27, 34, 0.7); 
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: rgba(48, 54, 61, 0.5); 
+    -fx-border-width: 1;
+}
+
+/* ================= TABLE VIEW (Transparency & Refined Lines) ================= */
+.table-view {
+    -fx-background-color: transparent; 
+    -fx-border-color: #30363d; 
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(28, 33, 40, 0.8); 
+    -fx-border-color: transparent transparent #30363d transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 45; 
+    /* FIX: Lighter vertical lines in the header */
+    -fx-border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #a855f7 !important; 
+    -fx-font-weight: bold;
+}
+
+.table-cell {
+    -fx-text-fill: white !important;
+    /* FIX: Lighter vertical lines between table columns */
+    -fx-border-color: transparent rgba(255, 255, 255, 0.08) transparent transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: rgba(22, 27, 34, 0.5) !important; 
+    -fx-text-fill: white !important;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(13, 17, 23, 0.5) !important; 
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+.table-view .filler, .table-view .corner {
+    -fx-background-color: transparent !important;
+}
+
+/* ================= BUTTONS & INPUTS ================= */
+.button {
+    -fx-background-color: #8b5cf6; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 25;
+}
+
+.button:hover {
+    -fx-background-color: #a78bfa;
+}
+
+.button-cancel {
+    -fx-background-color: #ef4444;
+}
+
+.text-field, .combo-box, .date-picker {
+    -fx-background-color: #0d1117; 
+    -fx-border-color: #30363d; 
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}
+
+/* FIX: Ensure the text displayed in the box AFTER selection is white */
+.combo-box > .list-cell {
+    -fx-text-fill: white !important;
+}
+
+/* ================= DATE SELECTION / CALENDAR FIXES ================= */
+.date-picker-popup {
+    -fx-background-color: #1c2128 !important;
+    -fx-border-color: #8b5cf6;
+    -fx-border-width: 1.5;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #1c2128 !important;
+}
+
+.date-picker-popup > .month-year-pane > .label {
+    -fx-text-fill: white !important;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: #1c2128 !important;
+}
+
+.date-picker-popup > .calendar-grid > .label {
+    -fx-text-fill: #6e7681 !important; 
+}
+
+/* ====== FIX ADDED: DAY NAMES (Sun, Mon, etc.) ====== */
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: #ffffff !important;
+}
+
+.date-picker-popup > .calendar-grid > .day-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white !important;
+}
+
+.date-picker-popup > .calendar-grid > .day-cell:hover {
+    -fx-background-color: #8b5cf6 !important;
+}
+
+.date-picker-popup > .calendar-grid > .today {
+    -fx-text-fill: #a855f7 !important;
+    -fx-font-weight: bold;
+}
+
+/* ================= DROPDOWN POPUP FIX (Forced Dark) ================= */
+.combo-box-popup .list-view {
+    -fx-background-color: #1c2128 !important;
+    -fx-border-color: #8b5cf6;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #1c2128 !important;
+    -fx-text-fill: white !important;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #8b5cf6 !important;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_CENTER" spacing="30.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.BookingController">
+   <children>
+      <HBox alignment="CENTER" spacing="40.0">
+         <children>
+            <VBox spacing="20.0" styleClass="glass-pane" prefWidth="500.0" alignment="CENTER">
+               <padding><Insets bottom="40.0" left="40.0" right="40.0" top="40.0" /></padding>
+               <children>
+                  <Label text="BOOK A ROOM" styleClass="section-title" />
+                  <GridPane hgap="15.0" vgap="18.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="120.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="220.0" />
+                    </columnConstraints>
+                    <children>
+                        <Label text="Guest Name:" GridPane.rowIndex="0" />
+                        <TextField fx:id="nameField" promptText="Enter Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Contact:" GridPane.rowIndex="1" />
+                        <TextField fx:id="contactField" promptText="Phone or Email" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Check-In:" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="checkInPicker" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Check-Out:" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="checkOutPicker" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Room Type:" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="typeFilter" prefWidth="220.0" promptText="Select Type" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Select Room:" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="availableRooms" prefWidth="220.0" promptText="Choose Room" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    </children>
+                  </GridPane>
+                  <Button onAction="#handleBooking" text="Confirm Booking" styleClass="button" />
+                  <Label fx:id="bookingStatus" />
+               </children>
+            </VBox>
+
+            <VBox spacing="20.0" styleClass="glass-pane" prefWidth="450.0" alignment="CENTER">
+               <padding><Insets bottom="40.0" left="40.0" right="40.0" top="40.0" /></padding>
+               <children>
+                  <Label text="CANCEL BOOKING" styleClass="section-title" />
+                  <Label text="Select active booking:" />
+                  <ComboBox fx:id="cancelDropdown" promptText="Search Room/Guest" prefWidth="350.0" />
+                  <Button onAction="#handleCancellation" text="Cancel This Booking" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-weight: bold; -fx-padding: 12 24; -fx-cursor: hand;" />
+                  <Label fx:id="cancelStatus" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding><Insets bottom="40.0" left="40.0" right="40.0" top="40.0" /></padding>
+</VBox>
